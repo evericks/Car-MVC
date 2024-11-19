@@ -10,7 +10,7 @@ using WebApplication1.Entities;
 
 namespace WebApplication1.Controllers
 {
-    public class GarageController : Controller
+    public class GarageController : BaseController
     {
         private readonly CarContext _context;
 

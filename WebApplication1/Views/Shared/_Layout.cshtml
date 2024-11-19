@@ -24,15 +24,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">User</a>
-                    </li>                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Tour" asp-action="Index">Tour</a>
-                    </li>                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="CarModel" asp-action="Index">CarModel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Garage" asp-action="Index">Garage</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Garage" asp-action="Index">Garage</a>
                     <li class="nav-item fw-bold">
                         <a asp-area="" asp-controller="Home" asp-action="About" class="nav-link">Về chúng tôi</a>
                     </li>
@@ -46,14 +49,32 @@
             </div>
             <div class="collapse navbar-collapse flex-grow-0">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    @if (ViewBag.IsLoggedIn != null && ViewBag.IsLoggedIn == true)
+                    {
+                    <!-- Hiển thị khi đã đăng nhập -->
                     <li class="nav-item fw-bold">
-                        <a class="nav-link" href="#">Đăng nhập</a>
+                        <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-link nav-link">Đăng xuất</button>
+                        </form>
                     </li>
                     <li class="nav-item fw-bold">
-                        <a class="nav-link" href="#">Đăng ký</a>
+                        <span class="nav-link">Xin chào, @ViewBag.Username!</span>
                     </li>
+                    }
+                    else
+                    {
+                    <!-- Hiển thị khi chưa đăng nhập -->
+                    <li class="nav-item fw-bold">
+                        <a asp-controller="Auth" asp-action="Login" class="nav-link">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a asp-controller="Auth" asp-action="Register" class="nav-link">Đăng ký</a>
+                    </li>
+                    }
                 </ul>
             </div>
+
             <div>
                 <p class="mb-0 text-cyan">Email: cojourney@gmail.com</p>
                 <p class="mb-0 text-cyan">Hotline: 0987-654-321</p>
