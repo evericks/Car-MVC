@@ -1,10 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+var sqlConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<CarContext>(options =>
+    options.UseSqlServer(sqlConnectionString));
 
+var app = builder.Build();
+        
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
