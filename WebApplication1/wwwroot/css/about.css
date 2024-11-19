@@ -1,0 +1,25 @@
+﻿h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    background: #e9ecef;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+

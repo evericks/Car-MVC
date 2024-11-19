@@ -1,0 +1,106 @@
+﻿/* Features Section */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.features h2 {
+    color: #0066cc;
+    font-size: 2rem;
+}
+
+.features p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.feature-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 22%;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Popular Routes Section */
+.popular-routes {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.popular-routes h2 {
+    font-size: 2rem;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.popular-routes p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.route-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.route-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 45%;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.route-item img {
+    width: 100%;
+    height: auto;
+}
+
+.route-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.route-info h3 {
+    color: #d9534f;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.route-info p {
+    font-size: 1rem;
+    color: #333;
+}

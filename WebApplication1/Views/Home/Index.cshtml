@@ -1,8 +1,104 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Trang chủ";
 }
+<link href="~/css/home.css" rel="stylesheet" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="search-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="departure">Điểm đi</label>
+                <select id="departure">
+                    <option selected>Chọn địa điểm</option>
+                    @* @foreach (var chuyendi in Model) *@
+                    @* { *@
+                    @* <option>@chuyendi.DiadiemKH</option> *@
+                    @* } *@
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination">Điểm đến</label>
+                <select id="destination">
+                    <option selected>Chọn địa điểm</option>
+                    @* @foreach (var chuyendi in Model) *@
+                    @* { *@
+                    @* <option>@chuyendi.NoiDen</option> *@
+                    @* } *@
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departure-date">Ngày đi</label>
+                <input type="date" id="departure-date">
+            </div>
+            <div class="form-group">
+                <label for="return-date">Ngày về</label>
+                <input type="date" id="return-date">
+            </div>
+        </div>
+        <div class="form-row">
+            @* <button class="btn-find" onclick="location.href='@Url.Action("TimKiemChuyenDi", "TrangChu", new { departure = Request["departure"], destination = Request["destination"], departureDate = Request["departureDate"], returnDate = Request["returnDate"] })'"> *@
+            @*     Tìm Chuyến Xe *@
+            @* </button> *@
+        </div>
+    </div>
 </div>
+<!-- Features Section -->
+<section class="features">
+    <h2>Welcome to CoJourney</h2>
+    <p>Vui vẻ - Cẩn thận - Hài lòng</p>
+    <div class="feature-items">
+        <div class="feature-item">
+            <div class="icon">👍</div>
+            <h3>Tiện Lợi</h3>
+            <p>Mua vé mọi lúc, mọi nơi mà không cần tốn nhiều thời gian.</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">☎️</div>
+            <h3>Hỗ Trợ 24/7</h3>
+            <p>Chúng tôi cung cấp dịch vụ chăm sóc khách hàng 24/7.</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">📋</div>
+            <h3>Thông tin đầy đủ</h3>
+            <p>Cung cấp thông tin đầy đủ về lịch trình, tuyến đường, giá vé.</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">💳</div>
+            <h3>Thanh toán dễ dàng</h3>
+            <p>Thanh toán đơn giản và bảo mật thông tin tuyệt đối.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Routes Section -->
+<section class="popular-routes">
+    <h2>TUYẾN PHỔ BIẾN</h2>
+    <p>Gợi ý những tuyến xe được đặt nhiều</p>
+    <div class="route-items">
+        <div class="route-item">
+            <div class="route-info">
+                <h3>Cần Thơ ➜ Sài Gòn</h3>
+                <p>3h | 165km | 150.000đ</p>
+            </div>
+        </div>
+        <div class="route-item">
+            <div class="route-info">
+                <h3>Sài Gòn ➜ Cần Thơ</h3>
+                <p>3h | 165km | 150.000đ</p>
+            </div>
+        </div>
+        <div class="route-item">
+
+            <div class="route-info">
+                <h3>Cần Thơ ➜ An Giang</h3>
+                <p>3h | 92km | 120.000đ</p>
+            </div>
+        </div>
+        <div class="route-item">
+            <div class="route-info">
+                <h3>An Giang ➜ Cà Mau</h3>
+                <p>3h | 140km | 180.000đ</p>
+            </div>
+        </div>
+    </div>
+</section>
