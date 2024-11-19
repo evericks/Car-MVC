@@ -22,17 +22,19 @@
                     <li class="nav-item fw-bold">
                         <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Trang chủ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">User</a>
-                    </li>                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Tour" asp-action="Index">Tour</a>
-                    </li>                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="CarModel" asp-action="Index">CarModel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Garage" asp-action="Index">Garage</a>
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">User</a> *@
+                    @* </li> *@
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="Tour" asp-action="Index">Tour</a> *@
+                    @* </li> *@
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="CarModel" asp-action="Index">CarModel</a> *@
+                    @* </li> *@
+                    @* <li class="nav-item"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="Garage" asp-action="Index">Garage</a> *@
+                    @* </li> *@
+
                     <li class="nav-item fw-bold">
                         <a asp-area="" asp-controller="Home" asp-action="About" class="nav-link">Về chúng tôi</a>
                     </li>
@@ -81,14 +83,14 @@
     @* </nav> *@
 </header>
 <div class="container">
-    <main role="main" class="pb-3">
+    <main role="main" class="py-5">
         @RenderBody()
     </main>
 </div>
 
 <footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2024 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="container d-flex justify-content-center">
+        &copy; 2024 - CoJourney
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
