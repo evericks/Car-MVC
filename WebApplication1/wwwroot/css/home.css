@@ -1,4 +1,75 @@
-﻿/* Features Section */
+﻿body {
+}
+/* Search Form Section */
+.search-form {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.search-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.search-form .form-group {
+    width: 22%;
+}
+
+.search-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.search-form .form-group select,
+.search-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form .btn-find {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form .btn-find:hover {
+    background-color: #c82333;
+}
+.table {
+    width: 100%;
+    /* border-collapse: collapse;*/
+    margin: 20px 0;
+}
+
+.th, .td {
+    /*  border: 1px solid #ddd;*/
+    padding: 8px;
+    text-align: left;
+}
+
+.th {
+    /*;
+    color: white;*/
+}
+
+.tr:hover {
+    /* Màu nền khi hover lên dòng */
+}
+
+/* Features Section */
 .features {
     text-align: center;
     padding: 40px 20px;

@@ -43,4 +43,10 @@ public class HomeController : BaseController
     {
         return View();
     }
+    
+    [HttpPost]
+    public IActionResult SearchTour()
+    {
+        return View();
+    }
 }
